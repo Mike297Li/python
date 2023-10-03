@@ -1,5 +1,5 @@
 def selectionSort(arr):
-    for pointer in range(1, len(arr)):
+    for pointer in range(1, len(arr)): # from index 1
         position = pointer
         currentVal = arr[pointer]
         while position > 0 and arr[position - 1] > currentVal:

@@ -2,7 +2,7 @@
 class Person:
     def __init__(self, name, gender, age):
         self.name = name
-        self.gender = gender
+        self.__gender = gender
         self.__age = age   # to restric the direct access to age
 
     #to set age
@@ -12,7 +12,7 @@ class Person:
     #to get age
     # to get age
     def getAge(self):
-        return self.__age
+        return self._age
 
     def sayHello(self):
         print("hello from the person")
@@ -24,9 +24,11 @@ class Person:
             return False
 
 
-p1 = Person("FUCHUN", "MALE", 30)
+p1 = Person("FUCHUN", "MALE2", 30)
 #will have error: 'Person' object has no attribute '__age'
 #print(p1.__age)
 p1.setAge(12)
-print(p1.getAge())
-print(p1.is_adult())
+# if do not have such property, it will create one
+# p1.__age=32
+print(p1._Person__age)
+print(p1._Person__gender)
