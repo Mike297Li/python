@@ -16,7 +16,7 @@ class Student:
 
     @classmethod
     def addClass(cls):
-        return cls.name
+        return cls.pi
 
 
 std = Student.getobject()
